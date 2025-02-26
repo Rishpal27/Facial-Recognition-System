@@ -2,10 +2,9 @@ import cv2
 import numpy as np
 face_cascade=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 detector=cv2.face.LBPHFaceRecognizer.create()
-image_paths=["Rishabh\\1.jpg","Rishabh\\2.jpg","Rishabh\\3.jpg","Rishabh\\4.jpg","Rishabh\\5.jpg"
-             ,"Rajeev\\1.jpg","Rajeev\\2.jpg","Rajeev\\3.jpg","Rajeev\\4.jpg","Rajeev\\5.jpg"]
-id=[0,0,0,0,0,1,1,1,1,1]
-names={0:'Rishabh',1:'Rajeev'}
+image_paths=[]#enter your own image paths individually
+id=[]#assign numerical id with respect to the image path indexes
+names={}#make a dictionary assigning id with name eg- 0:"Bob",1:"Alice"
 faces=[]
 new=[]
 for i in range (len(image_paths)):
